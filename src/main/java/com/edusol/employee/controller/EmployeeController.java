@@ -78,6 +78,7 @@ public class EmployeeController {
 	
 	@DeleteMapping("/delete-employee")
 	public Object deleteEmployee(@RequestParam int id) {
+		logger.info("employee Id:"+id);
 		return employeeService.deleteEmployee(id);
 	}
 }
